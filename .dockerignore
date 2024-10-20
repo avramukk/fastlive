@@ -1,0 +1,44 @@
+# Ігнорувати файли та папки, пов'язані з Git
+.git
+.gitignore
+
+# Ігнорувати файли, пов'язані з Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.mypy_cache/
+.pytest_cache/
+.hypothesis/
+
+# Ігнорувати файли редакторів
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Ігнорувати файли операційної системи
+.DS_Store
+Thumbs.db
+
+# Ігнорувати файли документації
+docs/
+*.md
+
+# Ігнорувати файли, специфічні для вашого проекту (додайте за потреби)
+# config.ini
+# secrets.json
