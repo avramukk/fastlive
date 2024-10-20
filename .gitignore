@@ -143,6 +143,6 @@ Thumbs.db
 *.swo
 *~
 
-# Проектні файли (додайте специфічні для вашого проекту файли)
+# Project files (add specific files for your project)
 # config.ini
 # secrets.json

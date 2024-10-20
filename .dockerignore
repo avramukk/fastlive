@@ -1,8 +1,8 @@
-# Ігнорувати файли та папки, пов'язані з Git
+# Ignore Git-related files and folders
 .git
 .gitignore
 
-# Ігнорувати файли, пов'язані з Python
+# Ignore Python-related files
 __pycache__
 *.pyc
 *.pyo
@@ -24,21 +24,21 @@ coverage.xml
 .pytest_cache/
 .hypothesis/
 
-# Ігнорувати файли редакторів
+# Ignore editor files
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 
-# Ігнорувати файли операційної системи
+# Ignore operating system files
 .DS_Store
 Thumbs.db
 
-# Ігнорувати файли документації
+# Ignore documentation files
 docs/
 *.md
 
-# Ігнорувати файли, специфічні для вашого проекту (додайте за потреби)
+# Ignore project-specific files (add as needed)
 # config.ini
 # secrets.json

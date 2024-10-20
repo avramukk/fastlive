@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stream Manager</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div id="app">
+        <header></header>
+            <h1>fastlive</h1>
+        </header>
+        <main class="container">
+            <div class="column left-column">
+                <h2>Create Stream</h2>
+                <form @submit.prevent="startStream">
+                    <input v-model="url" placeholder="Stream URL (rtmp/srt)" required>
+                    <input v-model="resolution" placeholder="Resolution (e.g. 1280x720)">
+                    <input v-model="bitrate" placeholder="Bitrate (e.g. 1000k)">
+                    <input v-model="fps" placeholder="FPS" type="number">
+                    <button type="submit">Start Stream</button>
+                </form>
+            </div>
+            <div class="column right-column">
+                <h2>Active Streams</h2>
+                <ul>
+                    <li v-for="(stream, id) in streams" :key="id">
+                        [[ stream.url ]] - [[ stream.resolution ]] - [[ stream.bitrate ]] - [[ stream.fps ]] FPS
+                        <button @click="stopStream(id)">Stop</button>
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
